@@ -50,6 +50,7 @@ export const TaskListScreen = observer(() => {
         onChangeText={onTextChange}
       />
       <FlatList
+        testID="taskList"
         style={styles.listContainer}
         data={filteredTasks}
         initialNumToRender={20}
