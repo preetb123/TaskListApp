@@ -50,8 +50,6 @@ export const LoginScreen = observer(() => {
     resolver: zodResolver(validationSchema),
   });
 
-  console.log('error: ', error);
-
   const onSubmit = (data: FormData) => {
     Keyboard.dismiss();
     mutate(data, {
@@ -73,15 +71,15 @@ export const LoginScreen = observer(() => {
   };
 
   return (
-    <Screen testID="loginScreen">
-      <KeyboardAwareScrollView
-        keyboardShouldPersistTaps={'handled'}
-        contentContainerStyle={styles.scrollContainer}>
+    <KeyboardAwareScrollView
+      keyboardShouldPersistTaps={'handled'}
+      contentContainerStyle={styles.scrollContainer}>
+      <Screen testID="loginScreen">
         <View alignSelf="center" alignItems="center">
           <TaskListIcon width={124} height={124} />
           <Text variant="subheader">TaskList</Text>
         </View>
-        <Text variant="header" marginBottom="m" color={''}>
+        <Text variant="header" marginBottom="m">
           Login
         </Text>
         <Controller
@@ -131,8 +129,8 @@ export const LoginScreen = observer(() => {
           loading={isLoading}
           onPress={handleSubmit(onSubmit)}
         />
-      </KeyboardAwareScrollView>
-    </Screen>
+      </Screen>
+    </KeyboardAwareScrollView>
   );
 });
 

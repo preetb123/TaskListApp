@@ -40,7 +40,7 @@ export const TaskListScreen = observer(() => {
   const filteredTasks = store.filteredTasks;
 
   return (
-    <Screen testID="taskListScreen">
+    <Screen testID="taskListScreen" paddingTop="s">
       <Input
         testID="searchboxInput"
         name="searchBar"

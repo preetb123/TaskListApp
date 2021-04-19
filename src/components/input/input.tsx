@@ -90,6 +90,12 @@ export const Input = React.forwardRef<TextInput, Props>(
     const color = !touched ? 'body' : validationColor;
     const colorCode = theme.colors[color];
 
+    const textColorStyle = { color: theme.colors['body'] };
+    const multilineStyle = {
+      paddingTop: 16,
+      paddingLeft: 16,
+    };
+
     return (
       <View marginBottom="s" key={`input-${name}`}>
         {label && <Text variant="label">{label}</Text>}
@@ -109,10 +115,18 @@ export const Input = React.forwardRef<TextInput, Props>(
               fill="grey"
             />
           )}
-          <View padding="s">{getIcon(inputType, colorCode)}</View>
+          {inputType && (
+            <View padding="s">{getIcon(inputType, colorCode)}</View>
+          )}
           <TextInput
             value={value}
-            style={styles.input}
+            height={48}
+            placeholderTextColor="grey"
+            style={[
+              styles.input,
+              textColorStyle,
+              isMultiline ? multilineStyle : {},
+            ]}
             autoCapitalize="none"
             ref={ref}
             multiline={isMultiline}
@@ -140,19 +154,19 @@ export const Input = React.forwardRef<TextInput, Props>(
                   <VisibilityIcon
                     width="24"
                     height="24"
-                    fill="rgba(12, 13, 52, 0.7)"
+                    fill={theme.colors['body']}
                   />
                 ) : (
                   <VisibilityOffIcon
                     width="24"
                     height="24"
-                    fill="rgba(12, 13, 52, 0.7)"
+                    fill={theme.colors['body']}
                   />
                 )
               }
             />
           )}
-          {touched && (
+          {touched && (inputType === 'password' || inputType === 'email') && (
             <RoundedIcon
               name={!error ? 'check' : 'x'}
               size={20}
@@ -166,7 +180,6 @@ export const Input = React.forwardRef<TextInput, Props>(
                 setValue('');
                 props.onChangeText('');
               }}
-              style={styles.cancelIconContainer}
               variant="imageButton"
               icon={<CancelIcon width={24} height={24} fill="grey" />}
             />
@@ -210,5 +223,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 0,
     paddingRight: 8,
+    paddingLeft: 8,
   },
 });

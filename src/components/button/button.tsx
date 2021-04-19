@@ -64,7 +64,6 @@ export const Button = ({
   if (variant === 'imageButton') {
     return (
       <TouchableOpacity
-        {...props}
         style={{
           justifyContent: 'center',
           alignItems: 'center',
