@@ -1,4 +1,5 @@
 apply plugin: "com.android.application"
+apply plugin: 'com.google.gms.google-services'
 
 import com.android.build.OutputFile
 
@@ -208,6 +209,7 @@ dependencies {
     }
 
     androidTestImplementation('com.wix:detox:+')
+    implementation platform('com.google.firebase:firebase-bom:27.0.0')
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
