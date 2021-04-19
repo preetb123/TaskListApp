@@ -88,7 +88,7 @@ export const theme = createTheme({
       fontWeight: 'bold',
       fontSize: 28,
       lineHeight: 42.5,
-      color: 'black',
+      color: 'textPrimary',
     },
     subheader: {
       fontWeight: '600',
@@ -134,6 +134,5 @@ const darkTheme: Theme = {
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const themeToApply = useColorScheme() === 'dark' ? darkTheme : theme;
-  console.log(Platform.OS, themeToApply);
   return <ReThemeProvider theme={themeToApply}>{children}</ReThemeProvider>;
 };

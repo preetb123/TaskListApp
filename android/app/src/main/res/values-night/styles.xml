@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="BootTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- set bootsplash.xml as activity background -->
+        <item name="android:background">@drawable/bootsplash_dark</item>
+    </style>
+</resources>

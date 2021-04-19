@@ -34,13 +34,14 @@ export const RootStoreModel = types.model('RootStore').props({
       }
     },
   }))
-  .actions(self => {
-    return {
-      resetStore() {
-        applySnapshot(self, {});
-      },
-    };
-  })
+  .actions(self => ({
+    resetStore() {
+      applySnapshot(self, {});
+    },
+    forceLogout() {
+      this.resetStore();
+    }
+  }))
   .actions((self) => ({
     setSearchString(searchString: string) {
       self.searchString = searchString;

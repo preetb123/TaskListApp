@@ -1,13 +1,20 @@
-import { expect, element, by } from 'detox';
+import { device, expect, element, by } from 'detox';
 
 export const loginUser = async () => {
   await expect(element(by.id('email'))).toBeVisible();
   await expect(element(by.id('password'))).toBeVisible();
-  // await element(by.id('email')).typeText('test@test.com');
-  await element(by.id('email')).replaceText('test@test.com');
+  if (device.getPlatform() === 'ios') {
+    await element(by.id('email')).typeText('test@test.com');
+  } else {
+    await element(by.id('email')).replaceText('test@test.com');
+  }
+
   await element(by.id('password')).tap();
-  // await element(by.id('password')).typeText('password123');
-  await element(by.id('password')).replaceText('password123');
+  if (device.getPlatform() === 'ios') {
+    await element(by.id('password')).typeText('password123');
+  } else {
+    await element(by.id('password')).replaceText('password123');
+  }
 
   await element(by.id('loginButton')).tap();
 

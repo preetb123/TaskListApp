@@ -12,7 +12,7 @@ describe('search and update task status', () => {
     await device.reloadReactNative();
   });
 
-  it('should create a task', async () => {
+  it('search and update a task status', async () => {
     await expect(element(by.id('taskListScreen'))).toBeVisible();
     await expect(element(by.id('searchboxInput'))).toBeVisible();
 

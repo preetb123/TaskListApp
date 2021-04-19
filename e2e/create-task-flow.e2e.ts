@@ -2,6 +2,8 @@ import { device, expect, element, by } from 'detox';
 
 import { loginUser } from './test-utils';
 
+const sampleTasks = require('./test-data.json');
+
 describe('Create task flow', () => {
   beforeAll(async () => {
     await device.launchApp();
@@ -24,9 +26,10 @@ describe('Create task flow', () => {
     await expect(element(by.id('createTaskButton'))).toBeVisible();
 
     await element(by.id('taskInput')).tap();
-    await element(by.id('taskInput')).typeText(
-      `Sample task added from e2e test at ${Date.toString()}`,
-    );
+
+    const index = Math.floor(Math.random() * 499) + 1;
+
+    await element(by.id('taskInput')).typeText(sampleTasks[index]);
     await element(by.id('createTaskButton')).tap();
 
     await expect(element(by.id('taskListScreen'))).toBeVisible();

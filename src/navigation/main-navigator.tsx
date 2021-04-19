@@ -90,6 +90,9 @@ const DrawerContent = observer(props => {
                 text2: String(error),
                 visibilityTime: 5000,
                 autoHide: true,
+                onPress: () => {
+                  store.forceLogout();
+                },
               });
             },
             onSettled: () => {

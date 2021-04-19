@@ -15,6 +15,7 @@ import { AuthNavigator, HomeNavigator } from './main-navigator';
 import { observer } from 'mobx-react-lite';
 import { useStores } from '../models';
 import { useColorScheme } from 'react-native';
+import RNBootSplash from 'react-native-bootsplash';
 
 const RootStack = observer(() => {
   const store = useStores();
@@ -30,7 +31,8 @@ export const RootNavigator = React.forwardRef<
     <NavigationContainer
       {...props}
       ref={ref}
-      theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
+      theme={scheme === 'dark' ? DarkTheme : DefaultTheme}
+      onReady={() => RNBootSplash.hide()}>
       <RootStack />
     </NavigationContainer>
   );
