@@ -81,7 +81,7 @@ export const TaskListScreen = observer(() => {
             <MaterialIndicator size={40} color="grey" />
           ) : (
             <View alignSelf="center" marginTop="xl">
-              <Text>No tasks to show</Text>
+              <Text>{error ? String(error) : 'No tasks to show'}</Text>
             </View>
           );
         }}

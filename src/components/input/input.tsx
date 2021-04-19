@@ -120,7 +120,6 @@ export const Input = React.forwardRef<TextInput, Props>(
           )}
           <TextInput
             value={value}
-            height={48}
             placeholderTextColor="grey"
             style={[
               styles.input,
@@ -129,12 +128,12 @@ export const Input = React.forwardRef<TextInput, Props>(
             ]}
             autoCapitalize="none"
             ref={ref}
-            multiline={isMultiline}
             editable={!disabled}
             onChange={e => {
               setValue(e.nativeEvent.text);
             }}
             {...inputProps}
+            multiline={isMultiline}
             secureTextEntry={inputType === 'password' && isPasswordHidden}
             onChangeText={text => {
               if (debounced) {

@@ -3,7 +3,7 @@ import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { StyleSheet, Keyboard } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-
+import { View as Motiview } from 'moti';
 import {
   Text,
   Input,
@@ -75,10 +75,15 @@ export const LoginScreen = observer(() => {
       keyboardShouldPersistTaps={'handled'}
       contentContainerStyle={styles.scrollContainer}>
       <Screen testID="loginScreen">
-        <View alignSelf="center" alignItems="center">
-          <TaskListIcon width={124} height={124} />
-          <Text variant="subheader">TaskList</Text>
-        </View>
+        <Motiview
+          from={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: 'timing', duration: 1000 }}>
+          <View alignSelf="center" alignItems="center">
+            <TaskListIcon width={124} height={124} />
+            <Text variant="subheader">TaskList</Text>
+          </View>
+        </Motiview>
         <Text variant="header" marginBottom="m">
           Login
         </Text>

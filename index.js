@@ -2,6 +2,7 @@
  * @format
  */
 import 'react-native-gesture-handler';
+import 'react-native-reanimated';
 import './src/utils/ignore-warnings';
 
 import { AppRegistry } from 'react-native';
