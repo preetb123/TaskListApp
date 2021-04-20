@@ -97,9 +97,9 @@ TaskListApp
 │   └── settings.gradle
 ├── index.js
 ├── ios
-│   ├── GoferApp
-│   ├── GoferApp.xcodeproj
-│   └── GoferAppTests
+│   ├── TaskListApp
+│   ├── TaskListApp.xcodeproj
+│   └── TaskListAppTests
 ├── e2e
 │   ├── config.json
 │   ├── environment.ts
