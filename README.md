@@ -31,6 +31,23 @@ yarn ios
 yarn android
 ```
 
+`Android:`
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/4496555/115353554-481f0d80-a1d6-11eb-9d2c-784028775436.png" width="24%" />
+  <img src="https://user-images.githubusercontent.com/4496555/115353653-67b63600-a1d6-11eb-93ca-7593dd73306e.png" width="24%" /> 
+  <img src="https://user-images.githubusercontent.com/4496555/115353700-73096180-a1d6-11eb-916a-d2f1fa3d5401.png" width="24%" />
+ <img src="https://user-images.githubusercontent.com/4496555/115353872-a5b35a00-a1d6-11eb-8c94-e56c8325ffbd.png" width="24%"/>
+</p>
+
+`iOS:`
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/4496555/115352887-7d772b80-a1d5-11eb-81f2-24137da0e0c1.png" width="24%" />
+  <img src="https://user-images.githubusercontent.com/4496555/115352954-9a136380-a1d5-11eb-82db-f2eeb04c9eae.png" width="24%" /> 
+  <img src="https://user-images.githubusercontent.com/4496555/115353086-bb744f80-a1d5-11eb-9019-f6d7edafcc54.png" width="24%" />
+ <img src="https://user-images.githubusercontent.com/4496555/115353278-f5455600-a1d5-11eb-8d5b-21596b2d9c53.png" width="24%"/>
+</p>
+
+
 ## Frameworks and libraries used
 
 - [react-native cli](https://reactnative.dev/docs/environment-setup) with `typescript` for setting up the app
@@ -130,6 +147,13 @@ This is where your stories will be registered and where the Storybook configs wi
 From the command line in your generated app's root directory, enter `yarn run storybook`
 This starts up the storybook server and opens a story navigator in your browser. With your app
 running, choose Toggle Storybook from the developer menu to switch to Storybook
+
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/4496555/115351668-1a38c980-a1d4-11eb-8a71-9eb97c1990bb.png" width="24%" />
+  <img src="https://user-images.githubusercontent.com/4496555/115351740-2fadf380-a1d4-11eb-9f06-a000ed55f746.png" width="24%" /> 
+  <img src="https://user-images.githubusercontent.com/4496555/115351807-42282d00-a1d4-11eb-9011-f3bc12aac0c1.png" width="24%" />
+ <img src="https://user-images.githubusercontent.com/4496555/115351861-553afd00-a1d4-11eb-8600-f23da314bd36.png" width="24%"/>
+</p>
 
 ## Running `e2e` tests
 
