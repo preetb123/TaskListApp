@@ -4,6 +4,7 @@ test('task can be created', () => {
   const instance = TaskModel.create({
     uid: 'abcd',
     title: 'Test task',
+    createdAt: Date.now(),
   });
 
   expect(instance).toBeTruthy();

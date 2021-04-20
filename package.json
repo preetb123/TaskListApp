@@ -13,7 +13,8 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "storybook": "start-storybook -p 7007",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "release-build": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/ && rm -rf android/app/src/main/res/drawable-* && rm -rf android/app/src/main/res/raw/* && cd android && ./gradlew clean && ./gradlew assembleRelease && cd .."
   },
   "dependencies": {
     "@hookform/resolvers": "^2.3.2",
@@ -26,7 +27,6 @@
     "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.14.4",
     "@shopify/restyle": "^1.4.0",
-    "apisauce": "^2.0.1",
     "lodash.debounce": "^4.0.8",
     "mobx": "^6.2.0",
     "mobx-react-lite": "^3.2.0",
